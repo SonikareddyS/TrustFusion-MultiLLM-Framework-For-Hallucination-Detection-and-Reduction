@@ -1,0 +1,209 @@
+C:\Users\shenoy_P\Downloads\trust_llm_system\trust_llm_system\.venv\Lib\site-packages\pydantic\_internal\_fields.py:160: UserWarning: Field "model_id" has conflict with protected namespace "model_".
+
+You may be able to resolve this warning by setting `model_config['protected_namespaces'] = ()`.
+  warnings.warn(
+C:\Users\shenoy_P\Downloads\trust_llm_system\trust_llm_system\.venv\Lib\site-packages\pydantic\_internal\_fields.py:160: UserWarning: Field "model_disagreements" has conflict with protected namespace "model_".
+
+You may be able to resolve this warning by setting `model_config['protected_namespaces'] = ()`.
+  warnings.warn(
+C:\Users\shenoy_P\Downloads\trust_llm_system\trust_llm_system\.venv\Lib\site-packages\pydantic\_internal\_fields.py:160: UserWarning: Field "model_responses" has conflict with protected namespace "model_".
+
+You may be able to resolve this warning by setting `model_config['protected_namespaces'] = ()`.
+  warnings.warn(
+test_1_factual_ai_query (__main__.EvidenceAccuracyTests.test_1_factual_ai_query) ... 2026-11-14 16:05:02 [info     ] comparison_complete            agreement=1.0 contradictions=0
+C:\Users\shenoy_P\Downloads\trust_llm_system\trust_llm_system\.venv\Lib\site-packages\torch\jit\_script.py:1491: FutureWarning: `torch.jit.script` is deprecated. Please switch to `torch.compile` or `torch.export`.
+  warnings.warn(
+ok
+test_2_false_date_is_red_and_excluded (__main__.EvidenceAccuracyTests.test_2_false_date_is_red_and_excluded) ... {
+  "query": "Explain Artificial Intelligence and describe three real-world applications.",
+  "sources": [
+    "https://www.ibm.com/think/topics/artificial-intelligence",
+    "https://en.wikipedia.org/wiki/Artificial_intelligence"
+  ],
+  "scores": [
+    {
+      "model": "model-0",
+      "trust": 1.0,
+      "consensus": 1.0,
+      "verification": 1.0,
+      "similarity": 1.0,
+      "supported": 4,
+      "contradicted": 0,
+      "unverified": 0,
+      "label": "GREEN"
+    },
+    {
+      "model": "model-1",
+      "trust": 1.0,
+      "consensus": 1.0,
+      "verification": 1.0,
+      "similarity": 1.0,
+      "supported": 4,
+      "contradicted": 0,
+      "unverified": 0,
+      "label": "GREEN"
+    },
+    {
+      "model": "model-2",
+      "trust": 1.0,
+      "consensus": 1.0,
+      "verification": 1.0,
+      "similarity": 1.0,
+      "supported": 4,
+      "contradicted": 0,
+      "unverified": 0,
+      "label": "GREEN"
+    }
+  ],
+  "final_answer": "- Artificial intelligence is the ability of machines to perform tasks that normally require human intelligence. [Source](https://www.ibm.com/think/topics/artificial-intelligence)\n\n- Artificial intelligence is used in medical diagnosis. [Source](https://www.ibm.com/think/topics/artificial-intelligence)\n\n- Artificial intelligence is used in self-driving cars. [Source](https://www.ibm.com/think/topics/artificial-intelligence)\n\n- Artificial intelligence is used in recommendation systems. [Source](https://www.ibm.com/think/topics/artificial-intelligence)"
+}
+2026-11-14 16:05:04 [info     ] comparison_complete            agreement=1.0 contradictions=0
+ok
+test_3_vague_answer_not_complete (__main__.EvidenceAccuracyTests.test_3_vague_answer_not_complete) ... {
+  "query": "In what year did Apollo 11 land on the Moon?",
+  "sources": [
+    "https://en.wikipedia.org/wiki/Apollo_11"
+  ],
+  "scores": [
+    {
+      "model": "model-0",
+      "trust": 0.9897,
+      "consensus": 1.0,
+      "verification": 1.0,
+      "similarity": 0.9484,
+      "supported": 1,
+      "contradicted": 0,
+      "unverified": 0,
+      "label": "GREEN"
+    },
+    {
+      "model": "model-1",
+      "trust": 0.9897,
+      "consensus": 1.0,
+      "verification": 1.0,
+      "similarity": 0.9484,
+      "supported": 1,
+      "contradicted": 0,
+      "unverified": 0,
+      "label": "GREEN"
+    },
+    {
+      "model": "model-2",
+      "trust": 0.49,
+      "consensus": 1.0,
+      "verification": 0.0,
+      "similarity": 0.8967,
+      "supported": 0,
+      "contradicted": 1,
+      "unverified": 0,
+      "label": "RED"
+    }
+  ],
+  "final_answer": "- Apollo 11 landed on the Moon in 1969. [Source](https://en.wikipedia.org/wiki/Apollo_11)"
+}
+2026-11-14 16:05:04 [info     ] comparison_complete            agreement=0.556 contradictions=0
+ok
+test_claim_guidance_keeps_original_query_filter (__main__.EvidenceAccuracyTests.test_claim_guidance_keeps_original_query_filter) ... ok
+test_live_ai_articles (__main__.EvidenceAccuracyTests.test_live_ai_articles) ... ok
+test_no_evidence_is_never_reliable (__main__.EvidenceAccuracyTests.test_no_evidence_is_never_reliable) ... {
+  "query": "Describe applications of artificial intelligence.",
+  "sources": [
+    "https://en.wikipedia.org/wiki/Artificial_intelligence"
+  ],
+  "scores": [
+    {
+      "model": "model-0",
+      "trust": 0.7893,
+      "consensus": 0.6667,
+      "verification": 1.0,
+      "similarity": 0.6133,
+      "supported": 1,
+      "contradicted": 0,
+      "unverified": 0,
+      "label": "AMBER"
+    },
+    {
+      "model": "model-1",
+      "trust": 0.7893,
+      "consensus": 0.6667,
+      "verification": 1.0,
+      "similarity": 0.6133,
+      "supported": 1,
+      "contradicted": 0,
+      "unverified": 0,
+      "label": "AMBER"
+    },
+    {
+      "model": "model-2",
+      "trust": 0.1787,
+      "consensus": 0.3333,
+      "verification": 0.0,
+      "similarity": 0.2267,
+      "supported": 0,
+      "contradicted": 0,
+      "unverified": 1,
+      "label": "RED"
+    }
+  ],
+  "final_answer": "- Artificial intelligence is used in medical diagnosis. [Source](https://en.wikipedia.org/wiki/Artificial_intelligence)"
+}
+LIVE WARNINGS: []
+LIVE SOURCES: [('Artificial intelligence', 'https://en.wikipedia.org/wiki/Artificial_intelligence'), ('What Is Artificial Intelligence (AI)? | Built In', 'https://builtin.com/artificial-intelligence'), ('What Is Artificial Intelligence (AI)? | Built In', 'https://builtin.com/artificial-intelligence'), ('Artificial intelligence', 'https://en.wikipedia.org/wiki/Artificial_intelligence'), ('Artificial intelligence', 'https://en.wikipedia.org/wiki/Artificial_intelligence'), ('Artificial intelligence (AI) | Definition, Examples, Types, Applications, Companies, & Facts | Britannica', 'https://www.britannica.com/technology/artificial-intelligence'), ('What Is Artificial Intelligence (AI)? | Built In', 'https://builtin.com/artificial-intelligence'), ('What Is Artificial Intelligence (AI)? | Built In', 'https://builtin.com/artificial-intelligence'), ('Artificial intelligence', 'https://en.wikipedia.org/wiki/Artificial_intelligence'), ('What Is Artificial Intelligence (AI)? | IBM', 'https://www.ibm.com/think/topics/artificial-intelligence'), ('What Is Artificial Intelligence (AI)? | IBM', 'https://www.ibm.com/think/topics/artificial-intelligence'), ('What Is Artificial Intelligence (AI)? | Built In', 'https://builtin.com/artificial-intelligence'), ('What Is Artificial Intelligence (AI)? | IBM', 'https://www.ibm.com/think/topics/artificial-intelligence'), ('What Is Artificial Intelligence (AI)? | Built In', 'https://builtin.com/artificial-intelligence'), ('Artificial intelligence', 'https://en.wikipedia.org/wiki/Artificial_intelligence'), ('What Is Artificial Intelligence (AI)? | Built In', 'https://builtin.com/artificial-intelligence'), ('What Is Artificial Intelligence (AI)? | Built In', 'https://builtin.com/artificial-intelligence'), ('Artificial intelligence', 'https://en.wikipedia.org/wiki/Artificial_intelligence'), ('Artificial intelligence (AI) | Definition, Examples, Types, Applications, Companies, & Facts | Britannica', 'https://www.britannica.com/technology/artificial-intelligence'), ('What Is Artificial Intelligence (AI)? | IBM', 'https://www.ibm.com/think/topics/artificial-intelligence'), ('Artificial general intelligence', 'https://en.wikipedia.org/wiki/Artificial_general_intelligence'), ('What Is Artificial Intelligence (AI)? | Built In', 'https://builtin.com/artificial-intelligence'), ('What Is Artificial Intelligence (AI)? | Built In', 'https://builtin.com/artificial-intelligence'), ('Artificial intelligence', 'https://en.wikipedia.org/wiki/Artificial_intelligence')]
+2026-11-14 16:05:16 [info     ] comparison_complete            agreement=1.0 contradictions=0
+ok
+test_query_route_uses_verification_even_when_rag_flag_is_false (__main__.PipelineAPITests.test_query_route_uses_verification_even_when_rag_flag_is_false) ... C:\Users\shenoy_P\Downloads\trust_llm_system\trust_llm_system\.venv\Lib\site-packages\starlette\formparsers.py:12: PendingDeprecationWarning: Please use `import python_multipart` instead.
+  import multipart
+C:\Users\shenoy_P\Downloads\trust_llm_system\trust_llm_system\.venv\Lib\site-packages\starlette\testclient.py:41: DeprecationWarning: The anyio.abc.BlockingPortal alias is deprecated, use anyio.from_thread.BlockingPortal instead.
+  [], typing.ContextManager[anyio.abc.BlockingPortal]
+{
+  "query": "What is AI?",
+  "sources": [],
+  "scores": [
+    {
+      "model": "model-0",
+      "trust": 0.49,
+      "consensus": 1.0,
+      "verification": 0.0,
+      "similarity": 1.0,
+      "supported": 0,
+      "contradicted": 0,
+      "unverified": 1,
+      "label": "RED"
+    },
+    {
+      "model": "model-1",
+      "trust": 0.49,
+      "consensus": 1.0,
+      "verification": 0.0,
+      "similarity": 1.0,
+      "supported": 0,
+      "contradicted": 0,
+      "unverified": 1,
+      "label": "RED"
+    },
+    {
+      "model": "model-2",
+      "trust": 0.49,
+      "consensus": 1.0,
+      "verification": 0.0,
+      "similarity": 1.0,
+      "supported": 0,
+      "contradicted": 0,
+      "unverified": 1,
+      "label": "RED"
+    }
+  ],
+  "final_answer": "Insufficient independently verified, cross-model evidence to answer safely."
+}
+2026-11-14 16:05:18 [info     ] startup: connecting to MongoDB
+2026-11-14 16:05:18 [info     ] comparison_complete            agreement=1.0 contradictions=0
+2026-11-14 16:05:19 [info     ] pipeline_complete              total_ms=359.0
+2026-11-14 16:05:19 [info     ] shutdown: closing MongoDB connection
+ok
+test_exact_formula_and_factual_override (__main__.TrustFormulaTests.test_exact_formula_and_factual_override) ... ok
+test_markdown_questions_and_headers_are_not_factual_claims (__main__.TrustFormulaTests.test_markdown_questions_and_headers_are_not_factual_claims) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 30.551s
+
+OK
